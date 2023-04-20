@@ -19,3 +19,10 @@ And to restart the dock:
 ```zsh
 killall Dock
 ```
+
+## Disable sidebar project path in the JetBrains IDEs
+From the Menu: `Help/Edit Custom Properties...`
+```properties
+project.tree.structure.show.url=false
+ide.tree.horizontal.default.autoscrolling=false
+```
