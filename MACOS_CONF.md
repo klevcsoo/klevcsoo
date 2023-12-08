@@ -9,15 +9,19 @@
 ## Dock show delay and speed
 To change the **dock show delay**:
 ```zsh
-defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-delay -float 0; killall Dock
 ```
 To change the **dock animation speed**:
 ```zsh
-defaults write com.apple.dock autohide-time-modifier -float 1.0
+defaults write com.apple.dock autohide-time-modifier -float 1.0; killall Dock
 ```
-And to restart the dock:
+To **lock the dock size**:
 ```zsh
-killall Dock
+defaults write com.apple.Dock size-immutable -bool true; killall Dock
+```
+To **unlock the dock size**:
+```zsh
+defaults write com.apple.Dock size-immutable -bool false; killall Dock
 ```
 
 ## Disable sidebar project path in the JetBrains IDEs
